@@ -118,8 +118,6 @@ while flag:
     print(f"Your cards are {showHand(gamblersCards)}giving you a value of {getHandValue(gamblersCards)}")
     print(f"The dealer has the revealed {dealersCards[0][0]} of {dealersCards[0][1]}")
 
-    # TODO: After 15/10/23 adding functionality and finding the dealers play need to fix game funtionality however too
-    #  tired tonight gonna eat then sleep. Hint for tommorow: Its the stupid showHand function that you hate
     while game:
         choice = input("Would you like to hit or stand ")
         if choice == "Hit":
@@ -134,6 +132,7 @@ while flag:
             dealerOutcome = dealersTurn(dealersCards)
             if dealerOutcome == "Stand":
                 print(determineWinner(gamblersCards, dealersCards))
+                #determineBet(determineWinner(g, d)) use the determine winner function to get the bet reward/ loss ez money
                 break
             elif dealerOutcome == "Bust":
                 print("The dealer has gone bust you win")
